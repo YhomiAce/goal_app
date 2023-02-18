@@ -8,10 +8,12 @@ export default function App() {
   const [open, setOpen] = useState(false);
 
   const addGoalHandler = (enteredGoal) => {
+    if (enteredGoal.length === 0) {
+      return;
+    }
     setCourseGoals([...courseGoals, { id: Math.random().toString(), value: enteredGoal }]);
     setOpen(false);
   }
-
 
   const removeGoalHandler = (goalId) => {
     console.log(goalId);

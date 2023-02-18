@@ -4,9 +4,8 @@ import { Button, TextInput, View, StyleSheet, Modal } from 'react-native'
 const GoalInput = (props) => {
     const { addGoalHandler, visible, cancelGoal } = props;
     const [enteredGoal, setEnteredGoal] = useState('');
-    const goalInputHandler = (enteredText) => {
-        setEnteredGoal(enteredText);
-    }
+
+    const goalInputHandler = (enteredText) => setEnteredGoal(enteredText);
 
     const addNewGoal = () => {
         addGoalHandler(enteredGoal)
